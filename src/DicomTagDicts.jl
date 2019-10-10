@@ -3550,13 +3550,10 @@ Dicts = Dict(
         0x106C => ["OB", "DetectorCalibrationData"])
 )
 
-# println(Tags[0x4010][0x106C]);
-
 function getVr(group::UInt16, element::UInt16)
     groupData = get(Dicts, group, nothing)
     elementData = nothing
     vr = nothing
-    println(groupData)
     if (groupData !== nothing)
         elementData = get(groupData, element, nothing)
         if (elementData != nothing)

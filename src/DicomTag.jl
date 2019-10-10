@@ -289,7 +289,6 @@ end
 
 function getDoubleStringValue(rawData::IO)
     ret = []
-    println(read(rawData, String))
     for str in split(read(rawData, String), '\\', keepempty=false)
         push!(ret, parse(Float64,str))
     end
